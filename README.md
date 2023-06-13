@@ -18,3 +18,11 @@ Das Script führt die folgenden Schritte aus:
 Der Fleiss-Kappa-Wert ist ein Maß für die Übereinstimmung der Bewertungen zwischen den Bewertern. Werte nahe bei 1 deuten auf eine hohe Übereinstimmung hin, während Werte nahe bei 0 eine geringe Übereinstimmung anzeigen.
 
 **Bitte beachten Sie:** Der Pfad zur Excel-Datei muss ggf. im Skript angepasst werden.
+
+## Find_Invalid-Tags.py
+
+Dieses Skript dient zur Identifikation von ungültigen oder fehlerhaften Tags in den Bewertungen. Im Detail durchläuft es alle Bewertungen und prüft dabei, ob die von den Ratern angegebenen Tags in der zuvor definierten Tag-Liste vorhanden sind. 
+
+Im Falle, dass ein Tag nicht in der Liste gefunden wird, wird dieser als ungültig eingestuft. Informationen über den jeweiligen Tag, den zugehörigen Rater und die Zeilennummer werden dann in eine separate Excel-Datei geschrieben.
+
+Die Ausgabe dieses Prozesses ermöglicht eine effiziente Fehlerbehebung und trägt zur Qualitätssicherung der Daten bei, da problematische Tags und ihre Quellen leicht identifiziert und adressiert werden können.
