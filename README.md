@@ -31,7 +31,7 @@ Die Ausgabe dieses Prozesses ermöglicht eine effiziente Fehlerbehebung und trä
 
 Das Python-Skript "Find_Overlapping_Tags.py" ist dazu gedacht, Überschneidungen in den Tags zu identifizieren, die von verschiedenen Bewertern in einer Textanalyse vergeben wurden.
 
-## Funktionsweise
+### Funktionsweise
 
 Das Skript lädt eine Excel-Datei, die die Bewertungen und Tags enthält. Anschließend wird eine leere DataFrame initialisiert, in die die Kommentare und die Überschneidungen der Tags eingetragen werden.
 
@@ -39,6 +39,6 @@ Das Skript geht dann zeilenweise durch die geladene DataFrame und speichert die 
 
 Falls Überschneidungen existieren, fügt das Skript den Kommentar und die Überschneidungen der Tags zur zuvor erstellten Ergebnis-DataFrame hinzu. Am Ende des Skripts wird die resultierende DataFrame in einer neuen Excel-Datei gespeichert.
 
-## Nutzung
+### Nutzung
 
 Das Skript benötigt eine Excel-Datei als Eingabe, die eine Tabelle namens "Kommentarliste" enthalten muss. Diese Tabelle sollte Spalten für die Kommentare und die Tags von jedem Bewerter enthalten. Das Skript erstellt dann eine neue Excel-Datei, die die Kommentare und die Überschneidungen der Tags enthält.
