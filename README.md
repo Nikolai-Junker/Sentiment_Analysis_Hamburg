@@ -19,7 +19,7 @@ Der Fleiss-Kappa-Wert ist ein Maß für die Übereinstimmung der Bewertungen zwi
 
 **Bitte beachten Sie:** Der Pfad zur Excel-Datei muss ggf. im Skript angepasst werden.
 
-## Find_Invalid-Tags.py
+## Find_Invalid_Tags.py
 
 Dieses Skript dient zur Identifikation von ungültigen oder fehlerhaften Tags in den Bewertungen. Im Detail durchläuft es alle Bewertungen und prüft dabei, ob die von den Ratern angegebenen Tags in der zuvor definierten Tag-Liste vorhanden sind. 
 
