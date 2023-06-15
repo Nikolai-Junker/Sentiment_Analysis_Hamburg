@@ -59,3 +59,24 @@ Abschließend wird das trainierte Modell auf dem Testset validiert und die Leist
 ### Nutzung
 
 Das Skript benötigt eine Excel-Datei mit den Kommentaren und zugehörigen Tags als Eingabe. Die Kommentare sollten bereits vorverarbeitet sein und die Tags sollten in einer kommagetrennten Liste vorliegen. Das Skript liefert als Ausgabe die Leistungsbeurteilung des trainierten Modells auf dem Testdatensatz.
+
+## Ensemble_Classifier.py
+Dieses Skript stellt einen fortschrittlichen Kommentarklassifizierer dar, welcher maschinelles Lernen einsetzt, um mehrere passende Tags für gegebene Kommentare vorherzusagen.
+Aufgrund von Feedback wurde ein Ansatz basierend auf ensemble classification mit random forst gewählt, um die geringe Datenmenge zu kompensieren. 
+
+## Funktionsweise
+
+Zunächst lädt das Skript eine Excel-Datei, die eine Reihe von Kommentaren und die dazugehörigen Tags enthält. Jeder dieser Kommentare durchläuft dann einen ausführlichen Preprocessing-Prozess. Dieser beinhaltet die Entfernung von speziellen Zeichen, Zahlen und Stoppwörtern sowie die Konvertierung aller Buchstaben in Kleinbuchstaben. Darüber hinaus werden sämtliche Akzente und diakritische Zeichen aus dem Text entfernt, um die Textdaten zu standardisieren.
+
+Im nächsten Schritt teilt das Skript die eingelesenen Daten in Trainings- und Validierungssets. Es extrahiert Kommentare und die jeweiligen Tags, reinigt und normalisiert diese Tags und wandelt sie in eine binäre Form um.
+
+Anschließend werden die sechs häufigsten Tags aus dem Trainingsset ermittelt und zur Modellierung verwendet. Diese Selektion ermöglicht es, die Komplexität des Modells zu reduzieren und die Rechenleistung zu optimieren.
+
+Das Skript stellt dann ein Ensemble von Klassifikatoren zusammen (einschließlich SGD, SVC und RandomForest), die durch eine Abstimmungsstrategie kombiniert werden. Mit Hilfe einer Pipeline wird die Textvektorierung durchgeführt und das Ensemblemodell auf den Trainingsdaten trainiert.
+
+Am Ende wird das trainierte Modell auf den Validierungsdaten getestet, um seine Fähigkeit zur Vorhersage von Tags auf neuen, unbekannten Daten zu beurteilen. Die Leistung des Modells wird dann durch einen detaillierten Klassifikationsbericht dargestellt.
+
+### Nutzung
+
+Das Skript erfordert eine Excel-Datei als Input, welche eine Tabelle mit den Spalten "Comment" und "Overlapping_Tags" enthält. Die Spalte "Comment" sollte die zu klassifizierenden Textkommentare und die Spalte "Overlapping_Tags" die zugehörigen Tags enthalten. Das Skript nutzt diese Informationen, um ein maschinelles Lernmodell zu trainieren und zu validieren, das die Tags für die Kommentare vorhersagt. Am Ende der Ausführung gibt das Skript einen detaillierten Klassifikationsbericht aus, der die Vorhersageleistung des Modells bewertet.
+
