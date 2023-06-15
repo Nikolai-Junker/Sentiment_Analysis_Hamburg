@@ -43,8 +43,7 @@ Falls Überschneidungen existieren, fügt das Skript den Kommentar und die Über
 
 Das Skript benötigt eine Excel-Datei als Eingabe, die eine Tabelle namens "Kommentarliste" enthalten muss. Diese Tabelle sollte Spalten für die Kommentare und die Tags von jedem Bewerter enthalten. Das Skript erstellt dann eine neue Excel-Datei, die die Kommentare und die Überschneidungen der Tags enthält.
 
-## Classifier
-
+## Classifier.py
 Das Python-Skript "Classifier" dient zur Kommentarklassifizierung mit mehreren Labels, welche aus einem Datensatz von Kommentaren und zugehörigen Tags abgeleitet werden.
 
 ### Funktionsweise
