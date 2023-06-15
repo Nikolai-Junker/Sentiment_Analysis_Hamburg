@@ -42,3 +42,21 @@ Falls Überschneidungen existieren, fügt das Skript den Kommentar und die Über
 ### Nutzung
 
 Das Skript benötigt eine Excel-Datei als Eingabe, die eine Tabelle namens "Kommentarliste" enthalten muss. Diese Tabelle sollte Spalten für die Kommentare und die Tags von jedem Bewerter enthalten. Das Skript erstellt dann eine neue Excel-Datei, die die Kommentare und die Überschneidungen der Tags enthält.
+
+## Multilabel-Textklassifikation
+
+Das Python-Skript "Multilabel_Textklassifikation" dient zur Textklassifikation mit mehreren Labels, welche aus einem Datensatz von Kommentaren und zugehörigen Tags abgeleitet werden.
+
+### Funktionsweise
+
+Das Skript lädt zunächst eine Excel-Datei mit den Kommentaren und den zugeordneten Tags. Nachdem die Daten eingelesen wurden, durchläuft jeder Kommentar einen Preprocessing-Prozess, bei dem spezielle Zeichen, Zahlen und Stopwörter entfernt und alle Buchstaben in Kleinbuchstaben umgewandelt werden.
+
+Danach wird der Datensatz in ein Trainings- und ein Testset aufgeteilt. Für jedes Set werden die Kommentare und die zugehörigen Tags extrahiert. Die Tags werden bereinigt, standardisiert und schließlich in eine binäre Form umgewandelt, sodass sie von dem Modell verarbeitet werden können.
+
+Anschließend wird eine Pipeline erstellt, die einen TfidfVectorizer zur Textvektorierung und einen OneVsRestClassifier mit einem LinearSVC-Klassifikator enthält. Mit dieser Pipeline wird das Modell auf den Trainingsdaten trainiert.
+
+Abschließend wird das trainierte Modell auf dem Testset validiert und die Leistung des Modells wird mit einem Klassifikationsbericht bewertet.
+
+### Nutzung
+
+Das Skript benötigt eine Excel-Datei mit den Kommentaren und zugehörigen Tags als Eingabe. Die Kommentare sollten bereits vorverarbeitet sein und die Tags sollten in einer kommagetrennten Liste vorliegen. Das Skript liefert als Ausgabe die Leistungsbeurteilung des trainierten Modells auf dem Testdatensatz.
