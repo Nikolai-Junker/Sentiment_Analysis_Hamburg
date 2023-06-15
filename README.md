@@ -2,11 +2,11 @@
 Meine Arbeit für das IT-Studienprojekt in Kooperation mit der Stadt Hamburg. In dieser Repository befinden sich eine Reihe von Pyhton-Files aus diesem Projekt.
 
 ## Fleiss_Kappa_Calculation.py
-Dieses Python-Script berechnet den Fleiss-Kappa-Wert für eine gegebene Excel-Tabelle, die Bewertungen von mehreren Bewertern enthält. Es ist entworfen, um zu messen, wie konsistent die Bewertungen zwischen den verschiedenen Bewertern sind.
+Dieses Python-Skript berechnet den Fleiss-Kappa-Wert für eine gegebene Excel-Tabelle, die Bewertungen von mehreren Bewertern enthält. Es ist entworfen, um zu messen, wie konsistent die Bewertungen zwischen den verschiedenen Bewertern sind.
 
 Die Bewertungen sind in Form von Tags, die jedem Subjekt in der Tabelle zugeordnet sind. Diese Tags repräsentieren verschiedene Kategorien wie Standort, Straße, Zone, Stadt und andere. 
 
-Das Script führt die folgenden Schritte aus:
+Das Skript führt die folgenden Schritte aus:
 
 1. Es liest eine Excel-Datei ein, in der die Bewertungen der Bewerter gespeichert sind.
 2. Es erstellt für jeden Bewerter eine binäre Matrix, die angibt, ob ein bestimmtes Subjekt getaggt wurde oder nicht.
@@ -17,7 +17,7 @@ Das Script führt die folgenden Schritte aus:
 
 Der Fleiss-Kappa-Wert ist ein Maß für die Übereinstimmung der Bewertungen zwischen den Bewertern. Werte nahe bei 1 deuten auf eine hohe Übereinstimmung hin, während Werte nahe bei 0 eine geringe Übereinstimmung anzeigen.
 
-**Bitte beachten Sie:** Der Pfad zur Excel-Datei muss ggf. im Skript angepasst werden.
+**Bitte beachten:** Der Pfad zur Excel-Datei muss ggf. im Skript angepasst werden.
 
 ## Find_Invalid_Tags.py
 
@@ -43,9 +43,9 @@ Falls Überschneidungen existieren, fügt das Skript den Kommentar und die Über
 
 Das Skript benötigt eine Excel-Datei als Eingabe, die eine Tabelle namens "Kommentarliste" enthalten muss. Diese Tabelle sollte Spalten für die Kommentare und die Tags von jedem Bewerter enthalten. Das Skript erstellt dann eine neue Excel-Datei, die die Kommentare und die Überschneidungen der Tags enthält.
 
-## Multilabel-Textklassifikation
+## Classifier
 
-Das Python-Skript "Multilabel_Textklassifikation" dient zur Textklassifikation mit mehreren Labels, welche aus einem Datensatz von Kommentaren und zugehörigen Tags abgeleitet werden.
+Das Python-Skript "Classifier" dient zur Kommentarklassifizierung mit mehreren Labels, welche aus einem Datensatz von Kommentaren und zugehörigen Tags abgeleitet werden.
 
 ### Funktionsweise
 
